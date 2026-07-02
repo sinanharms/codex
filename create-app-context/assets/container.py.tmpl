@@ -1,0 +1,25 @@
+from __future__ import annotations
+
+from pydantic import BaseModel, ConfigDict
+from loguru import logger
+
+from __SETTINGS_MODULE__ import __SETTINGS_CLASS__
+
+
+class __CONTEXT_CLASS__(BaseModel):
+    model_config = ConfigDict(arbitrary_types_allowed=True)
+
+    settings: __SETTINGS_CLASS__
+    __DEPENDENCY_FIELD__: __DEPENDENCY_TYPE__
+
+
+def create_context(settings: __SETTINGS_CLASS__) -> __CONTEXT_CLASS__:
+    logger.info("Initializing __CONTEXT_CLASS__")
+
+    __DEPENDENCY_FIELD__ = __DEPENDENCY_FACTORY__(settings=settings)
+    logger.info("Initialized __DEPENDENCY_FIELD__")
+
+    return __CONTEXT_CLASS__(
+        settings=settings,
+        __DEPENDENCY_FIELD__=__DEPENDENCY_FIELD__,
+    )

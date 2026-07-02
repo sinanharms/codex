@@ -1,0 +1,22 @@
+from __future__ import annotations
+
+import pytest
+
+from __CONTAINER_MODULE__ import create_context
+from __SETTINGS_MODULE__ import __SETTINGS_CLASS__
+
+
+def test_create_context_builds_dependencies() -> None:
+    settings = __SETTINGS_CLASS__(
+        __REQUIRED_FIELD__="value",
+    )
+
+    context = create_context(settings)
+
+    assert context.settings is settings
+    assert context.__DEPENDENCY_FIELD__ is not None
+
+
+def test_settings_requires_required_field() -> None:
+    with pytest.raises(ValueError, match="__REQUIRED_FIELD__"):
+        __SETTINGS_CLASS__()

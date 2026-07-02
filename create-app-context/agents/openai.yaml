@@ -1,0 +1,4 @@
+interface:
+  display_name: "Create App Context"
+  short_description: "Scaffold settings and app contexts"
+  default_prompt: "Use $create-app-context to scaffold Settings, ApplicationContext, abstract interfaces, wiring, and tests from this project's app patterns."

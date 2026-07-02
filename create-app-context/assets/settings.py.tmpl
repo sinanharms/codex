@@ -1,0 +1,32 @@
+from __future__ import annotations
+
+from typing import Any
+
+from pydantic import Field, SecretStr, model_validator
+from pydantic_settings import BaseSettings, SettingsConfigDict
+
+
+class __SETTINGS_CLASS__(BaseSettings):
+    __REQUIRED_FIELD__: str = Field(..., description="__REQUIRED_DESCRIPTION__")
+    __OPTIONAL_FIELD__: str | None = Field(default=None, description="__OPTIONAL_DESCRIPTION__")
+    __SECRET_FIELD__: SecretStr | None = Field(default=None)
+
+    model_config = SettingsConfigDict(
+        env_file=".env",
+        env_file_encoding="utf-8",
+        extra="ignore",
+        env_prefix="__ENV_PREFIX__",
+        case_sensitive=False,
+    )
+
+    @model_validator(mode="before")
+    @classmethod
+    def validate_settings(cls, values: Any) -> Any:
+        if not isinstance(values, dict):
+            return values
+        if not values.get("__REQUIRED_FIELD__"):
+            raise ValueError("__REQUIRED_FIELD__ must be specified")
+        return values
+
+
+settings = __SETTINGS_CLASS__()  # type: ignore

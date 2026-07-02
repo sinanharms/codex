@@ -1,0 +1,4 @@
+interface:
+  display_name: "Init Python Project"
+  short_description: "Scaffold uv Python projects"
+  default_prompt: "Use $init-python-project to create a new uv-managed Python project."
