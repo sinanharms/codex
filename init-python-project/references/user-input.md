@@ -8,7 +8,7 @@ Ask for these values before generating files. Ask sequentially: present only one
 - Description: used in `pyproject.toml` and `README.md`.
 - Python version: default `3.14`.
 - Runtime dependencies: default none. Use an empty `dependencies = []` list unless the user names runtime packages.
-- Dev dependencies: default `pre-commit>=4.5.0,!=4.5.1`, `ruff>=0.15.20`, `ty>=0.0.55`.
+- Dev dependencies: default `pre-commit>=4.5.0,!=4.5.1`, `pytest>=9.0.2`, `ruff>=0.15.20`, `ty>=0.0.55`.
 - Whether to run `uv sync`.
 - Whether to run `uv run pre-commit install`.
 
