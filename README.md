@@ -11,12 +11,10 @@ This repository is meant to live at `~/.codex/skills`. Each top-level directory 
 | `caveman` | Compress responses while keeping technical accuracy. |
 | `lazy-dev` | Apply minimal-diff, YAGNI-first engineering discipline. |
 | `python-review` | Review Python design, OOP, dependency boundaries, and Pydantic usage. |
+| `docs-generator` | Generate README, API, and architecture documentation from existing code. |
+| `docs-scaffold` | Split raw project docs into structured, cross-linked documentation. |
 | `init-python-project` | Scaffold a minimal `uv` Python project after collecting required inputs. |
 | `create-app-context` | Scaffold Python settings, application context, boundaries, wiring, and tests from local project patterns. |
-| `specsmd-master-agent` | Route specsmd AI-DLC work across planning, construction, and operations phases. |
-| `specsmd-inception-agent` | Guide requirements, context, story, and bolt planning. |
-| `specsmd-construction-agent` | Execute planned bolts through construction stages. |
-| `specsmd-operations-agent` | Build, deploy, verify, and monitor completed units. |
 
 ## Layout
 
@@ -31,6 +29,13 @@ This repository is meant to live at `~/.codex/skills`. Each top-level directory 
 |   +-- assets/
 |   +-- references/
 |   +-- agents/
++-- docs-generator/
+|   +-- SKILL.md
++-- docs-scaffold/
+|   +-- SKILL.md
+|   +-- examples/
+|   +-- references/
+|   +-- templates/
 +-- init-python-project/
 |   +-- SKILL.md
 |   +-- examples/
@@ -43,8 +48,6 @@ This repository is meant to live at `~/.codex/skills`. Each top-level directory 
 |   +-- SKILL.md
 |   +-- gotchas.md
 |   +-- references/
-+-- specsmd-*-agent/
-    +-- SKILL.md
 ```
 
 The `.system/` directory contains system-managed skills and is not the main content of this repo.
