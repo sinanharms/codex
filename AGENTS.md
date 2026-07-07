@@ -72,7 +72,7 @@ If a command fails with a quota error, inform the user and suggest `npx ctx7@lat
 Run Context7 CLI requests outside Codex's default sandbox. If a Context7 CLI command fails with DNS or network errors such as ENOTFOUND, host resolution failures, or fetch failed, rerun it outside the sandbox instead of retrying inside the sandbox.
 <!-- context7 -->
 
-@/home/sharms@hachmeister.local/.codex/RTK.md
+@/.codex/RTK.md
 
 
 ### Web search policy
