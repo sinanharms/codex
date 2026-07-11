@@ -1,8 +1,6 @@
 # Global Codex Guidance (~/.codex/AGENTS.md)
 
-@/.codex/RTK.md
-
-Global working agreements for Codex CLI.
+Always use rtk guidelines. Find them here: @/.codex/RTK.md
 
 Use `/caveman full` by default. Keep technical accuracy. Stop only when user says "normal mode" or "stop caveman".
 
