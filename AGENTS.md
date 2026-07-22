@@ -11,7 +11,9 @@ Use `/caveman full` by default. Keep technical accuracy. Stop only when user say
 * Do not limit yourself due to the LOC limit! If a task requires more code, split it into multiple files/modules/functions
 * Do not add default fallbacks during development phase. If something fails, let it fail, so we can fix it!
 * Do not leave empty try-catch blocks anywhere!
-* Do not reinvent the wheel! Use open source, self-hosted libraries when needed. Ask the user, and help them qualify their selection. 
+* Do not reinvent the wheel! Use open source, self-hosted libraries when needed. Ask the user, and help them qualify their selection.
+* Keep CLI commentary concise. Do not paste full `apply_patch`/diff bodies into commentary; summarize changed files and behavior instead. `Added file (+N -0)` output is patch-renderer output, 
+    not repeated CLI commands or individual file additions.
 
 ## Accuracy, recency, and sourcing (REQUIRED)
 
